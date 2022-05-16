@@ -27,7 +27,7 @@ a {
 }
 
 .header_site {
-    background-color: rgb(233, 231, 228);
+    background-color: #53575f;
 }
 
 .ul_site {
@@ -55,10 +55,36 @@ a {
 }
 
 .input_header {
-    border-radius: 20px;
-    margin: 20px 0px 20px 0px;
+    margin: 40px 0px 20px 0px;
+    background-color: transparent;
+    border: none;
 }
 
+.form__label {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+  }
+
+
+  .input_image {
+    font-family: 'Roboto', sans-serif;
+    padding: 0.7rem 2rem;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    border: none;
+    border-radius: 9px;
+    transition: all 0.3s;
+  }
+.input_image:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+  }
 .logo_bild {
     margin: 20px 0px 20px 0px;
 }
@@ -75,3 +101,71 @@ a {
 .admin{
     color: rgb(225, 147, 31);
 }
+
+
+.admin_table{
+    background-color: #646871;
+}
+
+
+
+
+.group        { 
+    position:relative; 
+    margin-bottom:45px; 
+  }
+  .input_header         {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  .input_header:focus     { outline:none; }
+
+  .label_header          {
+    color:rgb(121, 92, 92); 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  .input_header:focus ~  .label_header, input:valid ~  .label_header    {
+    top:-20px;
+    font-size:14px;
+    color:#08090c;
+  }
+
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#0f1630; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+.input_header:focus ~ .bar:before,   .input_header:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+

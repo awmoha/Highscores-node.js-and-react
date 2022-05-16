@@ -38,7 +38,7 @@ navigate('/admin/')
 
   return (
 <>
-    <h1>NewGame</h1>
+    <h1>New Game</h1>
 
     <form onSubmit={handleSubmit}  className="mx-5 mt-5">
     <div className="form-group col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -65,13 +65,14 @@ navigate('/admin/')
     <div  className="form-group mt-4 col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label for="exampleFormControlSelect1">Bild</label>
         <input 
+        className="input_image mt-3"
         type="text" 
-        className="form-control mt-3" 
         id="exampleFormControlInput1"
         placeholder="https://via.placeholder.com/150x150?text=XXXX"
         value={image_url}
         onChange={(e) => setImage_url(e.target.value)}
    />
+   <label for="exampleFormControlInput1" className="form__label">https://via.placeholder.com/150x150?text=XXXX</label>
 
     </div>
     <div className="form-group mt-4 col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">

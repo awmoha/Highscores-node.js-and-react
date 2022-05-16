@@ -61,7 +61,7 @@ navigate('/admin/')
   return (
       <>
     
-    <h1>NewScore</h1>
+    <h1>New Score</h1>
     <form onSubmit={handleSubmit} className="mx-5 mt-5">
 
     <div className="form-group mt-4 col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">

@@ -2,7 +2,7 @@ import {Link } from "react-router-dom"
 
 const GamesIndex = ({game}) => {
     return(
-        <nav className="p-4  m-4 border border-dark ">
+        <nav className="p-4  m-2 border border-dark ">
             < Link to={"/game/" + game.url_slug}>
                 <div className="row ">
                     <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-10 font-weight-bold">
