@@ -1,0 +1,75 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.navbar {
+    border: 2px black solid;
+}
+
+.list-high {
+    margin: 40px 0px 20px 0px;
+}
+
+.title_games {
+    margin: 60px 0px 20px 0px;
+}
+
+
+.lh {
+    float: right;
+}
+
+.header_site {
+    background-color: rgb(233, 231, 228);
+}
+
+.ul_site {
+    background-color: rgb(233, 231, 228);
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+.ul_site ul {
+    /* position: absolute; */
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 10px;
+    color: #6d7d8c;
+}
+
+.ul_site li {
+    list-style-type: none;
+}
+
+.image-list {
+    margin-right: 10px;
+}
+
+.input_header {
+    border-radius: 20px;
+    margin: 20px 0px 20px 0px;
+}
+
+.logo_bild {
+    margin: 20px 0px 20px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.spels_score{
+    font-size: 220px;
+}
+
+.admin{
+    color: rgb(225, 147, 31);
+}

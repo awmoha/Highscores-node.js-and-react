@@ -1,0 +1,44 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./routes/Home/Home.jsx"
+import GamesDetails from "./routes/GamesDetails/GamesDetails.jsx"
+import SearchResults  from "./routes/SearchResults/SearchResults.jsx"
+import Admin from "./routes/Admin/Admin.jsx"
+import NewGame from "./routes/Admin/NewGame/NewGame.jsx"
+import NewScores from "./routes/Admin/NewScores/NewScores.jsx"
+import AdminTable from "./routes/Admin/AdminTable/AdminTable.jsx"
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter> 
+    <Routes>
+
+    <Route path="/admin" element={<Admin />}>
+    <Route path="game/new" element={<NewGame />} />
+    <Route path="game/scores" element={<NewScores />} />
+    <Route path="/admin" element={<AdminTable />} />
+
+
+    </Route>
+<Route path="/" element={<App />}>
+<Route index element={<Home />}/>
+<Route path="game/:urlSlug" element={<GamesDetails />} />
+
+<Route path="search" element={<SearchResults />} />
+
+</Route>
+  </Routes>   
+   </BrowserRouter>
+  </React.StrictMode>
+);
+
+
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
