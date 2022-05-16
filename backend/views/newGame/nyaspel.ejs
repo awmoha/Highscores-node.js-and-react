@@ -1,0 +1,60 @@
+<title>
+    <%=title%>
+</title>
+<h1 class="mx-5 mt-5">Nytt spel</h1>
+<form method="post"  class="mx-5 mt-5">
+    <div class="form-group col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label for="exampleFormControlInput1">Title</label>
+        <input 
+        type="text" 
+        name="title" 
+        class="form-control mt-3" 
+        id="exampleFormControlInput1"
+        placeholder="Title">
+    </div>
+    <div class="form-group mt-4 col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label for="exampleFormControlTextarea1">Beskrivning</label>
+        <textarea class="form-control mt-3 "
+         name="description" 
+         id="exampleFormControlTextarea1"
+          rows="3">
+        </textarea>
+    </div>
+
+    <div  class="form-group mt-4 col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label for="exampleFormControlSelect1">Bild</label>
+        <input 
+        type="text" 
+        name="image_url" 
+        class="form-control mt-3" 
+        id="exampleFormControlInput1"
+        placeholder="https://via.placeholder.com/150x150?text=XXXX"
+   >
+
+    </div>
+    <div class="form-group mt-4 col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label for="exampleFormControlSelect1">Genre</label>
+        <input
+         type="text" 
+         name="genre" 
+         class="form-control mt-3" 
+         id="exampleFormControlInput1"
+         placeholder="Genre">
+
+    </div>
+
+   
+    <div class="form-group mt-4 col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label for="exampleFormControlInput1">Lanseringsår</label>
+        <input 
+        type="number"
+         name="lanseringsår" 
+         class="form-control mt-3" 
+         id="exampleFormControlInput1"
+         placeholder="Lanseringsår">
+    </div>
+
+    <button  class="btn btn-primary mt-4">Lägg till</button>
+
+
+</form>

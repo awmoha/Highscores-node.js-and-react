@@ -1,0 +1,42 @@
+
+<section class="row mb-4">
+    <div class="container">
+       <div class="row">
+           <img src="<%=gamesDetails.image_url%>" class="mx-2 col-4" >
+           <div class="col-7">
+               <h1 class="mb-3"> <%=gamesDetails.game_title%></h1>
+               <div class="mb-3"><%=gamesDetails.lanseringsår%> <%=gamesDetails.genre%></div>
+               <div class="mb-3"><%=gamesDetails.description%></div>
+            </div>
+       </div> 
+    </div>
+
+
+
+    <div>
+        <h3 class="text-center mt-4"> Topp 10 Highscores</h3>
+       <% if(highscore.length > 0) { %>  <% highscore.forEach(highscores => { %>
+<div class="row border border-2 border-dark mx-2 mb-1 p-3">
+<div class="col fs-5">
+    <p>
+        <%=highscores.score_first_name %>, <%=highscores.score_last_name %>,
+        <small>
+            <% const scoreDate = new Date (highscores.score_date); %>
+            <%=scoreDate.toLocaleDateString('se-SE'); %>
+        </small>
+    </p>
+</div>
+<div class="col text-end fs-2">
+    <p><%=highscores.score_score%></p>
+
+</div>
+</div>
+<% }) %> <% } else { %>
+    <div class="row">
+        <div class=" col text-center mt-3">
+            <p>No Highscores</p>
+        </div>
+    </div>
+        <% } %>
+    </div>
+</section>
