@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+var authorize = require('../../middleware/authorize')
 
 router.get("/highscores", async(req, res) => {
    const db = req.app.locals.db;
@@ -9,7 +10,7 @@ router.get("/highscores", async(req, res) => {
  });
 
 
- router.post('/' , async(req,res) => {
+ router.post('/',authorize, async(req,res) => {
   const {
     game_id,
     first_name,

@@ -17,8 +17,10 @@ var adminRouter = require('./routes/adminTable');
 var newSpelRouter = require('./routes/nyaspel');
 var newScoreRouter = require('./routes/adminScore');
 
+//API
 var gamesApiRouter = require('./routes/api/games')
 var scoresApiRouter = require('./routes/api/scores')
+var authApiRouter = require('./routes/api/auth');
 
 
 var app = express();
@@ -57,6 +59,7 @@ app.use("/admin/score/new", newScoreRouter);
 //här kan man välja hur uhr ska vara 
 app.use('/api/games', gamesApiRouter)
 app.use('/api/scores', scoresApiRouter)
+app.use('/api/auth', authApiRouter);
 
 
 //app.use('/users', usersRouter);

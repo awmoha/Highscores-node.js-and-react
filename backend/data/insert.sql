@@ -83,3 +83,7 @@ date,
  );
 
     
+INSERT INTO "user" (username, password, email, first_name, last_name)
+VALUES
+('john@doe.com', 'Secret#123', 'john@doe.com', 'John', 'Doe'),
+('jane@doe.com', 'Secret#123', 'jane@doe.com', 'Jane', 'Doe')

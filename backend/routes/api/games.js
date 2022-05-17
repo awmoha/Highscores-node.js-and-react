@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-
+var authorize = require('../../middleware/authorize')
 /* GET search page. */
 router.get("/", async(req, res) => {
 
@@ -44,7 +44,7 @@ res.json(highscoresGame);
 });
 
 //Post game
-router.post('/' , async(req,res) => {
+router.post('/' , authorize, async(req,res) => {
   const {
     title,
   description,
@@ -72,7 +72,7 @@ res.status(201).send(game);
 // }
 
 })
-router.delete('/:urlSlug', async(req,res) => {
+router.delete('/:urlSlug', authorize,async(req,res) => {
   const gameId = req.params.urlSlug;
   const db = req.app.locals.db;
   await deleteGame(gameId,db)
